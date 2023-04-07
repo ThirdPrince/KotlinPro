@@ -1,9 +1,7 @@
 package kotlins.nulls
 
 /**
- *
- *
- * @Author wujun
+ * @Author dhl
  * @Date 2023/4/6
  */
 fun main(args: Array<String>) {

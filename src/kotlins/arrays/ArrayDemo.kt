@@ -1,9 +1,7 @@
 package kotlins.arrays
 
 /**
- *
- *
- * @Author wujun
+ * @Author dhl
  * @Date 2023/4/6
  * 数组
  */

@@ -1,7 +1,7 @@
 package kotlins.classes
 
 /**
- * @Author wujun
+ * @Author dhl
  * @Date 2023/4/6
  */
 data class Person(val name :String,var age:Int){
