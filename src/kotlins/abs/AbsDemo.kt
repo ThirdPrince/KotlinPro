@@ -2,7 +2,6 @@ package kotlins.abs
 
 
 /**
- *
  * @Author dhl
  * @Date 2023/4/6
  * 接口与抽象类的共性：
