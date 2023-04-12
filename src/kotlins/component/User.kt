@@ -1,10 +1,13 @@
 package kotlins.component
 
-import jdk.management.resource.ResourceType
+
 
 /**
  * @Author dhl
  * @Date 2023/4/12
+ * 相比JavaBean data class 有很多好用的语法糖特性，但也有不足的地方
+ * data class 默认final 无法被继承
+ * 使用allOpen noArg
  */
 class User(val userName:String,val age:Int) {
     operator fun component1():String{
