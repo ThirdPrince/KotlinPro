@@ -8,7 +8,11 @@ package kotlins.advancefunc
 fun main(args: Array<String>) {
     //  forEachDemo()
     // ::mapDemo.invoke()
-    flatMapDemo()
+    //flatMapDemo()
+    //filterDemo()
+    //takeWhileDemo()
+    //reduceDemo()
+    foldDemo()
 }
 
 /**
@@ -71,4 +75,52 @@ fun flatMapDemo() {
         }
     }
     flatList2.forEach { println(it) }
+}
+
+/**
+ * 高阶函数filter 可以将可迭代对象进行过滤，只有满足predicate 过滤条件的元素（return true ）才会被留下：
+ */
+fun filterDemo(){
+    val list = listOf(1,2,3,4,6,7)
+    val newList = list.filter {
+        it %2 ==1
+    }
+    newList.forEach(::println)
+
+}
+
+/**
+ * 高阶函数takeWhile 会在遇到第一个不符合条件的元素时就结束取数据，留下前面的作为新的集合返回
+ *
+ */
+ fun takeWhileDemo(){
+    val list = listOf(1,1,2,3,5,8,2,21)
+    var newList = list.takeWhile {
+        it %2 ==1
+    }
+    newList.forEach(::println)
+    println("-------")
+    newList.takeWhile {
+        it <5
+    }
+    newList.forEach(::println)
+
+ }
+
+/**
+ * 高阶函数reduce 会从第一个元素开始累加，并从左到右将operation函数应用于当前累加值和每个元素
+ */
+fun reduceDemo(){
+    val list = listOf(1,2,3,4,5)
+    val result = list.reduce { acc, i ->  acc+i}
+    println(result)
+}
+
+/**
+ * 高阶函数fold 和reduce 差不多，只是fold多了一个初始值，后续处理和reduce 一样
+ */
+fun foldDemo(){
+    val list = listOf(1,2,3,4,5)
+    val result = list.fold(10) { acc, i ->  acc+i}
+    println(result)
 }
